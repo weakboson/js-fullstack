@@ -13,3 +13,15 @@ services:
     tty: true
     ports:
       - 3000:3000
+    depends_on:
+      - db
+  db:
+    image: "postgres:12"
+    ports:
+      - "54320:5432"
+    volumes:
+      - ./containers/pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=js-fullstack
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=js-fullstack
