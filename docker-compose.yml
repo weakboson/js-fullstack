@@ -19,6 +19,8 @@ services:
       TZ: Asia/Tokyo
   db:
     image: "postgres:12"
+    container_name: db
+    hostname: db
     ports:
       - "54320:5432"
     volumes:
@@ -27,3 +29,5 @@ services:
       - POSTGRES_USER=js-fullstack
       - POSTGRES_PASSWORD=admin
       - POSTGRES_DB=js-fullstack
+    environment:
+      TZ: Asia/Tokyo
