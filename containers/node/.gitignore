@@ -1,5 +1,7 @@
+.cache/*
+.config/*
+.local/*
 .npm/*
 .yarn/*
 .yarnrc
-.cache/*
 .*history
